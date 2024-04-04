@@ -1,0 +1,31 @@
+{
+  "name": "social-network-api",
+  "version": "1.0.0",
+  "description": "This is an API for a generic social networking site. I made this during my coding bootcamp",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index",
+    "seed": "node utils/seed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Spikey1289/Social-Network-API.git"
+  },
+  "keywords": [
+    "API"
+  ],
+  "author": "Spikey1289",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Spikey1289/Social-Network-API/issues"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^7.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.9"
+  },
+  "homepage": "https://github.com/Spikey1289/Social-Network-API#readme"
+}
