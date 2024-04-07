@@ -10,4 +10,4 @@ During this Challenge, I learned a lot about non-sequel databases. I created a d
 [Video Demo](https://drive.google.com/file/d/1PiwzJUJTWZ01PMstq-BYtqQfNICGzJIi/view?usp=drive_link)
 
 ### Link to Github
-[Click me!](https://github.com/Spikey1289/Tech-Blog)
+[Click me!](https://github.com/Spikey1289/Social-Network-API)
