@@ -50,7 +50,7 @@ module.exports = {
     //updates the thought at the designated thought ID
     async updateThought(req, res) {
         try {
-            const updatedThought = await Thought.findByIdAndUpdate(req.params.thoughtId, req.body.thoughtText);
+            const updatedThought = await Thought.findByIdAndUpdate(req.params.thoughtId, {thoughtText: req.body.thoughtText});
             if (!updatedThought) {
                 return res.status(404).json({ message: "No Thought with that ID" })
             }

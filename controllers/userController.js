@@ -91,7 +91,7 @@ module.exports = {
                 return res.status(404).json({ message: "No user with that ID" });
             }
 
-            res.json(friendAdd);
+            return res.json(friendAdd);
         } catch(err) {
             console.log(err);
             return res.status(500).json(err);
@@ -111,7 +111,7 @@ module.exports = {
                 return res.status(404).json({ message: "No user with that ID" });
             }
 
-            res.json(friendRemove);
+            return res.json(friendRemove);
         } catch(err) {
             console.log(err);
             return res.status(500).json(err);
