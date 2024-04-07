@@ -1,5 +1,5 @@
+// this model is not used for a collection, but is an embedded sub-document for Thought
 const { Schema, Types } = require('mongoose');
-
 
 const reactionSchema = new Schema(
     {

@@ -1,8 +1,7 @@
-const {ObjectId} = require('mongoose').Types;
 const {User, Thought} = require('../models');
-const { findById } = require('../models/Thought');
 
 module.exports = {
+    //Gets all the users in the User collection
     async getUsers(req, res){
         try {
             const allUsers = await User.find().select("-__v");
@@ -13,6 +12,8 @@ module.exports = {
             return res.status(500).json(err);
         }
     },
+
+    //gets the user with the designated ID
     async getOneUser(req,res) {
         try{
             const requestedUser = await User.findById(req.params.userId).select("-__v")
@@ -28,6 +29,8 @@ module.exports = {
             return res.status(500).json(err);
         }
     },
+
+    //adds a user to the User collection, getting the info from a JSON body
     async addUser(req, res) {
         try{
             const newUser = await User.create(req.body);
@@ -37,6 +40,8 @@ module.exports = {
             return res.status(500).json(err);
         }
     },
+
+    //updates the user at the designated ID with a JSON body
     async updateUser(req, res) {
         try {
             const updatedUser = await User.findByIdAndUpdate(req.params.userId, req.body);
@@ -55,6 +60,8 @@ module.exports = {
             return res.status(500).json(err);
         }
     },
+
+    //deletes the user with the designated ID from the collection
     async removeUser(req,res){
         try{
             const deletedUser = await User.findByIdAndDelete(req.params.userId);
@@ -71,6 +78,8 @@ module.exports = {
             return res.status(500).json(err);
         }
     },
+
+    //adds a userID to the friends array for the designated user
     async addUserFriend(req, res){
         try{
             const user = await User.findById(req.params.userId);
@@ -88,6 +97,8 @@ module.exports = {
             return res.status(500).json(err);
         }
     },
+
+    //deletes a userID to the friends array for the designated user
     async removeUserFriend(req, res){
         try {
             const user = await User.findById(req.params.userId);
